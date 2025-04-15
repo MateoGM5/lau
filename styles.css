@@ -1,0 +1,112 @@
+body {
+    background-color: #fce4ec;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Add some space between cards */
+}
+
+.title {
+    color: #ff6f73;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #ff6f73;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.card-container {
+    background-color: #ffd4d8;
+    border: 1px solid #ffb6bc;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+     width: 200px;
+    height: 100px; /* Ensure all cards have the same height */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+}
+
+.card-container a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card-container a:hover {
+    color: #555;
+}
+
+.card-container p {
+    margin: 0;
+    color: #e40e0e;
+    font-size: 14px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.anniversary-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed for spacing */
+  }
+  
+  .anniversary-container .card-container {
+    background-color: #ffd4d8;
+    border: 1px solid #ffb6bc;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Add hover styles for the anniversary card */
+  .anniversary-container .card-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .anniversary-container .card-container a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .anniversary-container .card-container a:hover {
+    color: #555;
+  }
+  
+  .anniversary-container .card-container p {
+    margin: 0;
+    color: #e40e0e;
+    font-size: 14px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  

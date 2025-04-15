@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer mes</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to bottom, #0b2c15, #02100b);
+        color: #e8ffe9;
+        overflow: hidden;
+      }
+
+      .stars {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: -2;
+        overflow: hidden;
+      }
+
+      .star {
+        position: absolute;
+        background: white;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        animation: blink 2s infinite ease-in-out;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+
+      .slider {
+        height: 100%;
+        transition: transform 0.8s ease-in-out;
+      }
+
+      .slide {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .card {
+        background: rgba(0, 64, 39, 0.5);
+        border-left: 5px solid #4ade80;
+        border-radius: 1rem;
+        padding: 2rem;
+        max-width: 500px;
+        text-align: left;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        animation: float 4s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      h1,
+      h2 {
+        color: #b2f5bf;
+      }
+
+      .final {
+        font-size: 1.3rem;
+        color: #d1ffd8;
+        text-align: center;
+      }
+
+      .highlight {
+        color: #6ee7b7;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      audio {
+        display: none;
+      }
+
+      .stars-image {
+        width: 100%;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+
+    <audio autoplay loop>
+      <source src="./im-with-you.mp3" type="audio/mp3" />
+      Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <div class="container" id="container">
+      <div class="slider" id="slider">
+        <div class="slide">
+          <div class="card">
+            <h1>Nuestro primer mes 💚</h1>
+            <p><em>No estamos tan lejos, los dos vemos la misma luna</em></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>📍 9 de septiembre — Nos "conocimos"</h2>
+            <p>
+              Entraste a la compañía, te presentaste, y en tu posteo a todos les
+              pusiste un corazón… pero a mí, una torta 🍰<br />
+              Y así, sin saberlo, empezó todo.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>💬 27 de septiembre — El primer mensaje</h2>
+            <p>
+              Te hablé con una excusa de trabajo. Vos seguro no te acordás, pero
+              yo sí.<br />
+              Te prometo que no quería dejar de hablarte desde ese día
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>👀 13 de septiembre — La primera reunión</h2>
+            <p>
+              Cuando te vi en cámara por primera vez, le dije a un amigo: "estoy
+              enamorado de ella"<br />
+              Sí, sin contexto. Sin conocerte. Pero sabiendolo
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>🎄 Navidad — Lo hicimos mutuo</h2>
+            <p>
+              Me preguntaste si era verdad todo lo que sentía. Yo te dije que
+              sí.<br />
+              Y descubrí que vos también sentías lo mismo.<br />
+              Al final mi regalo fuiste vos
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>🚩 Red flag pero mía</h2>
+            <p>
+              Cuando lloraste después de rechazarme a ser mi novia<br />
+              vi a alguien sensible, que siente, que duda, que se entrega.<br />
+              Sos una red flag andante... pero sos mi red flag favorita.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>🌌 16 de marzo — Te pedí que seas mi novia</h2>
+            <p>
+              Ya sabía que eras hermosa, pero en esa videollamada te ví y no
+              tenía palabras. Me animé, y te lo dije: ¿querés ser mi novia?<br />
+              Dijiste que "Sí, por favor Mateo por favor sos hermoso si se mi novio te amo que lindo que sos" y bueno, tuve que aceptar... Fue mágico, como el cielo de esa
+              noche.<br /><br />
+              Así estaban las estrellas ese día:
+            </p>
+            <img
+              src="./img/cielo.png"
+              alt="Estrellas del 16 de marzo"
+              class="stars-image"
+            />
+          </div>
+        </div>
+        <div class="slide">
+          <div class="card">
+            <h2>💚 A vos</h2>
+            <p>
+              Me gustás mucho, Laura. Me gusta estar con vos, hablar con vos,
+              reírme con vos.<br />
+              Cada vez que vibra el celular, espero que seas vos.<br />
+              Y si no lo sos... bueno, igual pienso en vos.<br /><br />
+              Quiero conocerte bien. Con todo lo bueno, lo raro (queso con
+              helado ???), lo sensible, lo fuerte.<br />
+              Gracias por este primer mes. Por estar. Por elegirme.<br /><br />
+              Sigamos escribiendo esta historia <br /><br />
+              <span class="highlight">Feliz primer mes, mi chinita 🥰</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const stars = document.querySelector(".stars");
+      for (let i = 0; i < 120; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        stars.appendChild(star);
+      }
+
+      const container = document.getElementById("container");
+      const slider = document.getElementById("slider");
+      let currentSlide = 0;
+      const totalSlides = slider.children.length;
+      let isScrolling = false;
+
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateSlide();
+        }
+      }
+
+      function prevSlide() {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSlide();
+        }
+      }
+
+      function updateSlide() {
+        slider.style.transform = `translateY(-${currentSlide * 100}vh)`;
+      }
+
+      container.addEventListener(
+        "wheel",
+        (e) => {
+          e.preventDefault();
+          if (isScrolling) return;
+          isScrolling = true;
+          setTimeout(() => (isScrolling = false), 1000);
+          if (e.deltaY > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        },
+        { passive: false }
+      );
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown") nextSlide();
+        if (e.key === "ArrowUp") prevSlide();
+      });
+    </script>
+  </body>
+</html>
