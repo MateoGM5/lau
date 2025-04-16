@@ -135,8 +135,12 @@
     </audio> -->
 
 <audio id="audio" autoplay muted>
-  <source src="im-with-you.mp3" type="audio/mpeg">
+  <source src="./im-with-you.mp3" type="audio/mpeg">
 </audio>
+
+<button onclick="document.getElementById('audio').play()">Reproducir</button>
+<audio id="audio" src="./im-with-you.mp3"></audio>
+
 
 <script>
   // Le sacás el mute cuando el usuario hace clic en cualquier parte
