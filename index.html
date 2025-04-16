@@ -134,7 +134,20 @@
       Tu navegador no soporta audio HTML5.
     </audio> -->
 
-     <audio id="myAudio" autoplay loop>
+<audio id="audio" autoplay muted>
+  <source src="im-with-you.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Le sacás el mute cuando el usuario hace clic en cualquier parte
+  document.addEventListener('click', () => {
+    const audio = document.getElementById('audio');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+</script>
+
+<!--      <audio id="myAudio" autoplay loop>
       <source src="./im-with-you.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
@@ -151,7 +164,7 @@
         },
         { once: true }
       ); // solo la primera vez
-    </script>
+    </script> -->
     
 
     <div class="container" id="container">
