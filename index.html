@@ -134,20 +134,24 @@
       Tu navegador no soporta audio HTML5.
     </audio> -->
 
-  <audio id="myAudio" autoplay loop>
-    <source src="im-with-you.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+     <audio id="myAudio" autoplay loop>
+      <source src="./im-with-you.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
 
-   <script>
-    const audio = document.getElementById("myAudio");
-    audio.volume = 0; // arranca en silencio
+    <script>
+      const audio = document.getElementById("myAudio");
+      audio.volume = 0.5; // arranca en silencio
 
-    // Apenas el usuario hace clic en cualquier lado, le subimos el volumen
-    document.addEventListener("click", () => {
-      audio.volume = 1; // sonido normal
-    }, { once: true }); // solo la primera vez
-  </script>
+      // Apenas el usuario hace clic en cualquier lado, le subimos el volumen
+      document.addEventListener(
+        "click",
+        () => {
+          audio.volume = 1; // sonido normal
+        },
+        { once: true }
+      ); // solo la primera vez
+    </script>
     
 
     <div class="container" id="container">
