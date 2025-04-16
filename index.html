@@ -12,6 +12,7 @@
         background: linear-gradient(to bottom, #0b2c15, #02100b);
         color: #e8ffe9;
         overflow: hidden;
+        touch-action: pan-y;
       }
 
       .stars {
@@ -52,6 +53,7 @@
       .slider {
         height: 100%;
         transition: transform 0.8s ease-in-out;
+        touch-action: none;
       }
 
       .slide {
@@ -129,23 +131,25 @@
   <body>
     <div class="stars"></div>
 
+    <audio id="audio" autoplay loop>
+      <source src="./im-with-you.mp3" type="audio/mpeg" />
+    </audio>
 
-<audio id="audio" autoplay LOOP>
-  <source src="./im-with-you.mp3" type="audio/mpeg">
-</audio>
-
-
-<script>
-  // Le sacás el mute cuando el usuario hace clic en cualquier parte
-  document.addEventListener('click', () => {
-    const audio = document.getElementById('audio');
-    audio.muted = false;
-    audio.play();
-  }, { once: true });
-</script>
+    <script>
+      document.addEventListener(
+        "click",
+        () => {
+          const audio = document.getElementById("audio");
+          audio.muted = false;
+          audio.play();
+        },
+        { once: true }
+      );
+    </script>
 
     <div class="container" id="container">
       <div class="slider" id="slider">
+        <!-- SLIDES -->
         <div class="slide">
           <div class="card">
             <h1>Nuestro primer mes 💚</h1>
@@ -156,9 +160,9 @@
           <div class="card">
             <h2>📍 9 de septiembre — Nos "conocimos"</h2>
             <p>
-              Entraste a la compañía, te presentaste, y en tu posteo a todos les
-              pusiste un corazón… pero a mí, una torta 🍰<br />
-              Y así, sin saberlo, empezó todo.
+              Entraste a la compañía, te presentaste, y en tu posteo a todos
+              les pusiste un corazón… pero a mí, una torta 🍰<br />Y así, sin
+              saberlo, empezó todo.
             </p>
           </div>
         </div>
@@ -166,9 +170,9 @@
           <div class="card">
             <h2>💬 27 de septiembre — El primer mensaje</h2>
             <p>
-              Te hablé con una excusa de trabajo. Vos seguro no te acordás, pero
-              yo sí.<br />
-              Te prometo que no quería dejar de hablarte desde ese día
+              Te hablé con una excusa de trabajo. Vos seguro no te acordás,
+              pero yo sí.<br />Te prometo que no quería dejar de hablarte desde
+              ese día
             </p>
           </div>
         </div>
@@ -177,8 +181,8 @@
             <h2>👀 13 de septiembre — La primera reunión</h2>
             <p>
               Cuando te vi en cámara por primera vez, le dije a un amigo: "estoy
-              enamorado de ella"<br />
-              Sí, sin contexto. Sin conocerte. Pero sabiendolo
+              enamorado de ella"<br />Sí, sin contexto. Sin conocerte. Pero
+              sabiéndolo
             </p>
           </div>
         </div>
@@ -187,9 +191,8 @@
             <h2>🎄 Navidad — Lo hicimos mutuo</h2>
             <p>
               Me preguntaste si era verdad todo lo que sentía. Yo te dije que
-              sí.<br />
-              Y descubrí que vos también sentías lo mismo.<br />
-              Al final mi regalo fuiste vos
+              sí.<br />Y descubrí que vos también sentías lo mismo.<br />Al
+              final mi regalo fuiste vos
             </p>
           </div>
         </div>
@@ -197,9 +200,9 @@
           <div class="card">
             <h2>🚩 Red flag pero mía</h2>
             <p>
-              Cuando lloraste después de rechazarme a ser mi novia<br />
-              vi a alguien sensible, que siente, que duda, que se entrega.<br />
-              Sos una red flag andante... pero sos mi red flag favorita.
+              Cuando lloraste después de rechazarme a ser mi novia<br />vi a
+              alguien sensible, que siente, que duda, que se entrega.<br />Sos
+              una red flag andante... pero sos mi red flag favorita.
             </p>
           </div>
         </div>
@@ -208,10 +211,11 @@
             <h2>🌌 16 de marzo — Te pedí que seas mi novia</h2>
             <p>
               Ya sabía que eras hermosa, pero en esa videollamada te ví y no
-              tenía palabras. Me animé, y te lo dije: ¿querés ser mi novia?<br />
-              Dijiste que "Sí, por favor Mateo por favor sos hermoso si se mi novio te amo que lindo que sos" y bueno, tuve que aceptar... Fue mágico, como el cielo de esa
-              noche.<br /><br />
-              Así estaban las estrellas ese día:
+              tenía palabras. Me animé, y te lo dije: ¿querés ser mi novia?<br />Dijiste
+              que "Sí, por favor Mateo por favor sos hermoso si se mi novio te
+              amo que lindo que sos" y bueno, tuve que aceptar...<br />Fue
+              mágico, como el cielo de esa noche.<br /><br />Así estaban las
+              estrellas ese día:
             </p>
             <img
               src="./img/cielo.png"
@@ -225,12 +229,11 @@
             <h2>💚 A vos</h2>
             <p>
               Me gustás mucho, Laura. Me gusta estar con vos, hablar con vos,
-              reírme con vos.<br />
-              Cada vez que vibra el celular, espero que seas vos.<br />
-              Y si no lo sos... bueno, igual pienso en vos.<br /><br />
+              reírme con vos.<br />Cada vez que vibra el celular, espero que
+              seas vos.<br />Y si no lo sos... bueno, igual pienso en vos.<br /><br />
               Quiero conocerte bien. Con todo lo bueno, lo raro (queso con
-              helado ???), lo sensible, lo fuerte.<br />
-              Gracias por este primer mes. Por estar. Por elegirme.<br /><br />
+              helado ???), lo sensible, lo fuerte.<br />Gracias por este primer
+              mes. Por estar. Por elegirme.<br /><br />
               Sigamos escribiendo esta historia <br /><br />
               <span class="highlight">Feliz primer mes, mi chinita 🥰</span>
             </p>
@@ -255,6 +258,10 @@
       const totalSlides = slider.children.length;
       let isScrolling = false;
 
+      function updateSlide() {
+        slider.style.transform = `translateY(-${currentSlide * 100}vh)`;
+      }
+
       function nextSlide() {
         if (currentSlide < totalSlides - 1) {
           currentSlide++;
@@ -269,10 +276,6 @@
         }
       }
 
-      function updateSlide() {
-        slider.style.transform = `translateY(-${currentSlide * 100}vh)`;
-      }
-
       container.addEventListener(
         "wheel",
         (e) => {
@@ -280,11 +283,8 @@
           if (isScrolling) return;
           isScrolling = true;
           setTimeout(() => (isScrolling = false), 1000);
-          if (e.deltaY > 0) {
-            nextSlide();
-          } else {
-            prevSlide();
-          }
+          if (e.deltaY > 0) nextSlide();
+          else prevSlide();
         },
         { passive: false }
       );
@@ -292,6 +292,22 @@
       document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowDown") nextSlide();
         if (e.key === "ArrowUp") prevSlide();
+      });
+
+      // Soporte para móviles (tocar y deslizar hacia arriba/abajo)
+      let touchStartY = 0;
+
+      container.addEventListener("touchstart", (e) => {
+        touchStartY = e.touches[0].clientY;
+      });
+
+      container.addEventListener("touchend", (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaY = touchStartY - touchEndY;
+        if (Math.abs(deltaY) > 50) {
+          if (deltaY > 0) nextSlide(); // hacia arriba
+          else prevSlide(); // hacia abajo
+        }
       });
     </script>
   </body>
